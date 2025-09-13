@@ -1,0 +1,105 @@
+h2 {
+    color: var(--white);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--gray);
+}
+
+.footer__container {
+    padding: 30px 10%;
+    display: grid;
+    gap: var(--padding-large);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+            'image navigate featured message'
+}
+
+.footer__container__images {
+    display: flex;
+    flex-direction: column;
+    grid-area: image;
+}
+
+.footer__container__images__image {
+    width: 200px;
+    height: auto;
+}
+
+.footer__container__images__links {
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-large);
+
+}
+
+.footer__container__images__fb {
+    height: 40px;
+}
+
+.footer__container__navigate {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-large);
+    grid-area: navigate;
+}
+
+.footer__container__navigate__list {
+    list-style-type: none;
+}
+
+.footer__container__navigate__list__option {
+    font-size: 16px;
+    font-family: Roboto, Roboto Fallback;
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+.footer__container__featured {
+    display: flex;
+    grid-area: featured;
+}
+
+.footer__container__message {
+    display: flex;
+    flex-direction: column;
+    grid-area: message;
+    align-items: center;
+}
+
+.footer__container__message__text{
+    font-size: 16px;
+    color: var(--light-gray);
+    font-family: Roboto, Roboto Fallback;
+    line-height: 24px;
+}
+
+.footer__container__message__more {
+    font-size: 16px;
+    color: var(--light-gray);
+    font-family: Roboto, Roboto Fallback;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+        .footer__container {
+        padding: 30px 10%;
+        display: grid;
+        gap: var(--padding-large);
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'image image'
+            'navigate featured'
+            'message message'
+    }
+
+    .footer__container__images {
+        align-items: center;
+    }
+}

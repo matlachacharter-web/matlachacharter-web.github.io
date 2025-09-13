@@ -1,0 +1,35 @@
+<div class="caraousel">
+    <div class="caraousel__container">
+        @for(card of titles; track card.length; let i = $index) {
+            @if(i === currentSlide) {
+                <div class="enter-container" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)" animate.enter="enter-animation">
+                    <app-carousel-card
+                        image={{this.images[i]}}
+                        title={{this.titles[i]}}
+                        price={{this.prices[i]}}
+                        description={{this.descriptions[i]}}
+                        animate.enter="slide-in">
+                    </app-carousel-card>
+                </div>
+                <div class="carousel__caraousel__container__dots">
+                    @for (dot of titles; track dot.length; let i = $index) {
+                        <div class="carousel__caraousel__container__dots__dot" [class.carousel__caraousel__container__dots__dot--active]="i === currentSlide">
+
+                        </div>
+                    }
+                </div>
+                <div class="caraousel__container__counter">
+                    <p class="caraousel__container__counter__text">{{i + 1}}/{{titles.length}}</p>
+                </div>
+            }
+        }   
+    </div>
+    <div class="caraousel__buttons">
+        <button class="caraousel__buttons__button" (click)="PreviousClick()">
+            <svg class="caraousel__buttons__button__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+        </button>
+        <button class="caraousel__buttons__button" (click)="NextClick()">
+            <svg class="caraousel__buttons__button__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+        </button>
+    </div>
+</div>

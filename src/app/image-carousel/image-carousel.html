@@ -1,0 +1,24 @@
+<div class="carousel">
+  <div class="carousel-images" (touchstart)="onTouchStart($event)"
+  (touchend)="onTouchEnd($event)">
+    <img
+      *ngFor="let image of images; let i = index"
+      [src]="image"
+      [class.active]="i === currentIndex"
+      [class.inactive]="i !== currentIndex"
+      alt="Carousel image"
+    />
+  </div>
+
+  <button class="nav prev" (click)="prev()">❮</button>
+  <button class="nav next" (click)="next()">❯</button>
+
+  <div class="indicators">
+    <span
+      *ngFor="let img of images; let i = index"
+      (click)="goTo(i)"
+      [class.active]="i === currentIndex"
+    ></span>
+  </div>
+</div>
+

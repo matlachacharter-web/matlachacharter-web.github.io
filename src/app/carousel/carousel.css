@@ -1,0 +1,79 @@
+.caraousel__container__counter {
+  display: flex;
+  justify-content: center;
+}
+
+.caraousel__container__counter__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--orange);
+  font-family: Roboto, Roboto Fallback;
+}
+
+.enter-container {
+  width: 100%;
+  touch-action: pan-y; /* prevents vertical scroll interference */
+}
+
+.caraousel__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.caraousel__buttons__button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+}
+
+.caraousel__buttons__button__icon {
+    fill: var(--black);
+    height: 40px;
+    width: 40px;
+}
+
+.enter-animation {
+  animation: slide-fade 1s;
+}
+
+@media (max-width: 768px) {
+  .carousel__caraousel__container__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .carousel__caraousel__container__dots__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--black);
+    transition: background-color 0.3s ease;
+  }
+
+  .carousel__caraousel__container__dots__dot--active {
+    background-color: var(--orange); /* Active dot color */
+  }
+
+  .caraousel__container__counter {
+    display: none;
+  }
+
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

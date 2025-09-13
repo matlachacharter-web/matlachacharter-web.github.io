@@ -1,0 +1,129 @@
+ul, li {
+    list-style-type: none;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--black);
+    background: var(--gray);
+    align-items: center;
+    max-height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000
+}
+
+.navbar__logo {
+    display: flex;
+}
+
+.navbar__logo__img {
+    height: 101px;
+    width: auto;
+    padding-left: 50px;
+}
+
+.navbar__links__list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 50px;
+}
+
+.navbar__links__list__link {
+    font-size: 20px;
+    font-family: Roboto, Roboto Fallback;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar__links__list__link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
+
+/* Hide hamburger by default */
+.navbar__links__icon {
+    display: none;
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.navbar__links__list__close__icon {
+    display: none;
+  }
+
+/* --------------------- */
+/* MOBILE OVERRIDE BELOW */
+/* --------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-height: none;
+    width: 100%;
+  }
+
+  .navbar__logo__img {
+    height: 80px;
+  }
+
+  .navbar__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+  }
+
+  .navbar__links__icon {
+    display: block;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    z-index: 1001;
+    padding-right: 10px;
+  }
+
+  .navbar__links__list {
+    display: none;
+  }
+
+  .navbar__links.active .navbar__links__list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    gap: 40px;
+    z-index: 1000;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 10px;
+  }
+
+  .navbar__links__list__option {
+    border-bottom: 1px solid rgb(211, 211, 211);
+  }
+
+  /* Hide hamburger icon when menu is open */
+  .navbar__links.active .navbar__links__icon {
+    display: none;
+  }
+
+  .navbar__links__list__close__icon {
+    display: block;
+  }
+
+  .navbar__links__list__link {
+    color: black;
+    font-size: 24px;
+  }
+}

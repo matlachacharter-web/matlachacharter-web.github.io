@@ -1,0 +1,121 @@
+<div class="home">
+    <h1 class="home__headers bold">Matlacha Saltwater Outfitters Available Trips</h1>
+    <app-carousel></app-carousel>
+</div>
+<div class="home__info-container">
+        <h2 class="home__info-container__header">
+            Pine Island Fishing with Matlacha Saltwater Outfitters
+        </h2>
+        <h3 class="home__info-container__subheader">
+            Uncover The Hidden Gems Of Pine Island Fishing Charters Now
+        </h3>
+        <div class="home__info-container__message">
+            <div class="home__info-container__message__top">
+                <h4 class="home__info-container__message__top__header">
+                    Meet the Captain
+                    <span class="home__info-container__message__top__header__span">
+                        Captain Whitney Hall
+                    </span>
+                </h4>
+                <h5 class="home__info-container__message__top__subheader">
+                    Pine Island Fishing Charter
+                </h5>
+                <div class="home__info-container__message__top__top-container">
+                    <p class="home__info-container__message__top__top-container__text">
+                            Matlacha Saltwater Outfitters offers premium Pine Island fishing charters, 
+                            delivering exceptional experiences for anglers of all skill levels. Guided by Captain Whitney Hall, 
+                            an experienced Matlacha fishing guide, our trips focus on inshore fishing in Pine Island, FL. 
+                            We target popular species like snook, redfish, trout, and snapper, providing a variety of options including redfish charters, 
+                            thrilling tarpon fishing adventures, and peaceful sunset tours. Whether you're new to fishing or a seasoned angler, our guided 
+                            trips are designed to suit everyone’s needs with expert instruction and local knowledge.
+                    </p>
+                    <p class="home__info-container__message__bot__text">
+                    Specializing in Pine Island backwater and nearshore fishing, we offer diverse fishing styles and 
+                    locations to enhance your adventure. Matlacha Saltwater Outfitters is dedicated to providing private, 
+                    affordable fishing charters tailored to your preferences. Our trips feature light tackle fishing and the 
+                    best fishing spots in Matlacha, FL. Schedule your charter today for an unforgettable fishing experience in Matlacha 
+                    and the surrounding areas!
+            </p>
+                </div>
+            </div>
+            <div class="home__info-container__message__video">
+                <video src="home.mp4" autoplay="false" controls playsinline preload="auto" width="100%" height="100%" type="video/mp4"></video>
+            </div>
+        </div>
+        <div class="home__infor-container__buttons">
+            <button class="home__infor-container__buttons__button">Schedule Your Fishing Trip</button>
+        </div>
+</div>
+<div class="home__location-container">
+    <div class="home__location-container__header">
+        <h2 class="home__location-container__header__heading">
+            Pine Island Fishing Near Me
+        </h2>
+        <p class="home__location-container__header__subheading">
+            JOIN ME OUT ON THE WATER
+        </p>
+        <p class="home__location-container__header__price">
+            Prices range from $350 - $1500
+        </p>
+    </div>
+    <div class="home__location-container__body">
+        <div class="home__location-container__body__message">
+            <p class="home__location-container__body__message__text">
+                Pine Island is a premier fishing destination known for its diverse waters and 
+                abundance of prized game fish. Pine Island fishing charters offer access to the area’s best fishing grounds, 
+                from shallow backwaters to deeper nearshore waters. Anglers can enjoy inshore fishing in Pine Island, FL, 
+                targeting snook, redfish, trout, and snapper, while those looking for an exciting challenge can book tarpon fishing in 
+                Matlacha, Florida. The region is perfect for both experienced anglers and Matlacha fishing for beginners, with expert 
+                Matlacha fishing guides available to help you make the most of your trip.
+            </p>
+            @if(this.readMore === true) {
+                <p class="home__location-container__body__message__text">
+                    Whether you're interested in redfish charters in Pine Island, light tackle fishing in Pine Island, or 
+                    exploring the best fishing spots in Matlacha, FL, there’s something for everyone. 
+                    For those who prefer a more relaxed experience, sunset fishing tours in Pine Island and 
+                    private fishing charters in Matlacha provide a peaceful way to enjoy the water. If you're planning a trip, 
+                    you’ll find affordable fishing charters in Matlacha and expert-led Pine Island guided fishing trips designed to 
+                    help you land the perfect catch.
+                </p>
+            }
+            <div class="home__locatin-container__body__message__buttons">
+                <button class="home__locatin-container__body__message__buttons__button" (click)="toggleRead()">
+                    @if(this.readMore === true) {
+                        Read Less
+                    }
+                    @else {
+                        Read More
+                    }
+                </button>
+            </div>
+        </div>
+        <div class="home__location-container__body__map">
+            <google-map
+                height="500px"
+                width="100%"
+                [center]="center"
+                [zoom]="zoom">
+                <map-polygon
+                    [paths]="polygonCoords"
+                    [options]="polygonOptions">
+                </map-polygon>
+            </google-map>
+            <p class="home__location-container__body__map__text">
+                The map shows where we fish. The red area is our primary fishing 
+                area depending on time of year and fishing conditions. 
+                The pins represent guest meeting locations.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="home__schedule-container">
+        <p class="home__schedule-container__header">
+            View the {{this.currentYear}} trips for
+        </p>
+        <p class="home__schedule-container__header-main">
+            Matlacha Saltwater Outfitters
+        </p>
+        <button class="home__schedule-container__button">
+            View {{this.currentYear}} Trips Now
+        </button>
+</div>
