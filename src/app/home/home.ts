@@ -42,6 +42,7 @@ export class Home implements OnInit {
 
   ngOnInit() {
     this.currentYear = this.currentDate.getFullYear();
+    
   }
 
   toggleRead() {
