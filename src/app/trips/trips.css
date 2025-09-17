@@ -1,0 +1,270 @@
+.trips{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.trips__header {
+    margin: 0;
+    color: #000 !important;
+    font-size: 36px !important;
+    min-height: auto !important;
+    font-family: Roboto, Roboto Fallback;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.trips__section {
+    height: 80px;
+}
+
+.trips__trip-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-bottom: 0px;
+    border: 1px solid #aaa;
+    padding: 23px 30px;
+    box-shadow: none;
+    border-radius: 5px;
+    background-color: var(--white);
+    box-sizing: border-box;
+    gap: 20px
+}
+
+.trips__trip-container:hover {
+    border-color: var(--orange);
+    box-shadow: 0 0 24px 24px rgba(0, 0, 0, 0.08);
+}
+
+.trips__trip-container__header__main {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--gray);
+    font-family: Roboto, Roboto Fallback;
+    margin: 0 0 5px;
+}
+
+.trips__trip-container__header__sub {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 2px !important;
+    color: var(--gray);
+    line-height: 22px;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.trips__trip-container__header__link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.trips__trip-container__body {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.trips__trip-container__body__images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trips__trip-container__body__images--size-image {
+    width: 270px;
+}
+
+.trips__trip-container__body__images__image {
+    width: 100%;
+    border-radius: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.trips__trip-container__body__images__details {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.trips__trip-container__body__images__details__icon {
+    width: 20px;
+    height: auto;
+    padding: 2px;
+    border-radius: 3px;
+    border: 1px solid #d4d4d4;
+    background-color: hsla(0, 0%, 83%, 0);
+}
+
+.trips__trip-container__body__images__details__text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray);
+    margin: 0;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.trips__trip-container__body__message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trips__trip-container__body__message__description {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: Roboto, Roboto Fallback;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.trips__trip-container__body__message__description__tag {
+    font-weight: 600;
+}
+
+.trips__trip-container__body__message__description__learn-more {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.trips__trip-container__body__message__pricing {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.trips__trip-container__body__message__pricing__block {
+    display: flex;
+    flex-direction: row;
+}
+
+.trips__trip-container__body__message__pricing__block__trip {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid var(--light-gray);
+    padding: 5px;
+}
+
+.trips__trip-container__body__message__pricing__block__trip__header {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--black);
+    font-family: Roboto, Roboto Fallback;
+}
+
+.trips__trip-container__body__message__pricing__block__trip__detail {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.trips__trip-container__body__message__pricing__block__trip__detail__text {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    width: 50%;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.trips__trip-container__body__message__pricing__block__trip__detail__sub {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.trips__trip-container__body__message__pricing__block__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border: 1px solid var(--light-gray);
+    border-left: 0px;
+    padding: 5px;
+}
+
+.trips__trip-container__body__message__pricing__block__price__text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0666fe;
+    text-align: right;
+    margin: 0;
+    font-family: Roboto, Roboto Fallback;
+    padding-bottom: 5px;
+}
+
+.trips__trip-container__body__message__pricing__block__price__text--sub {
+    font-size: 12px;
+    line-height: 10px;
+    color: rgb(127, 127, 127);
+    font-weight: 400;
+    margin: 0;
+    font-family: Roboto, Roboto Fallback;
+    text-align: right;
+}
+
+.trips__trip-container__body__message__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.trips__trip-container__body__message__buttons__button {
+    width: 500px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .trips__section {
+        height: 55px;
+    }
+
+    .trips__trip-container__body__images--size-image {
+        width: 100%;
+    }
+
+    .trips__trip-container__body__message__pricing__block__trip__detail__sub {
+        font-size: 10px;
+    }
+
+    .trips__trip-container {
+        width: 100%;
+    }
+
+    .trips__trip-container__body {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .trips__trip-container__body__message__pricing {
+        flex-direction: column;
+    }
+
+    .trips__trip-container__body__message__description {
+        padding-bottom: 0px;
+    }
+}

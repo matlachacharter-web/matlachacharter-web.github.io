@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Carousel } from '../carousel/carousel';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [Carousel, GoogleMapsModule],
+  imports: [Carousel, GoogleMapsModule, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

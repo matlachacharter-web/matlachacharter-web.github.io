@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="home__info-container__message__video">
-                <video src="home.mp4" autoplay="false" controls playsinline preload="auto" width="100%" height="100%" type="video/mp4"></video>
+                <video src="home.mp4" preload="auto" playsinline controls width="100%" height="100%" type="video/mp4"></video>
             </div>
         </div>
         <div class="home__infor-container__buttons">
@@ -115,7 +115,7 @@
         <p class="home__schedule-container__header-main">
             Matlacha Saltwater Outfitters
         </p>
-        <button class="home__schedule-container__button">
+        <button routerLink="/trips" class="home__schedule-container__button">
             View {{this.currentYear}} Trips Now
         </button>
 </div>
