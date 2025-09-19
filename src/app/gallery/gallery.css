@@ -1,0 +1,182 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.gallery__header {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Roboto Fallback;
+    font-size: 50px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.gallery__grid {
+    display: flex;
+    justify-content: space-between;
+    column-count: 5;
+    column-gap: 2.5em;
+    padding: 20px 10%;
+}
+
+.gallery__grid__cell {
+    margin-bottom: 1em;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+/* only affect gallery grid thumbnails */
+.gallery__grid__cell img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.gallery__grid__cell__title {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); /* dark background for contrast */
+  color: #fff;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.gallery__grid__cell__title p {
+    margin: 0;
+    padding: 10px;
+    font-family: Roboto, "Roboto Fallback";
+    font-weight: 600;
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: zoom-out;
+  margin-top: 100px;
+}
+
+/* Enlarged image */
+.overlay-img {
+  width: 40vh;      /* force scale */
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.overlay-title {
+  margin-top: 16px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+
+.overlay-img:hover {
+  transform: scale(1.02);
+}
+
+.overlay-content__close {
+  display: none;
+}
+
+.gallery__message {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30% 20px 10%;
+  gap: 40px;
+}
+
+.gallery__message__body__header {
+  font-family: Roboto, Roboto Fallback;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.gallery__messsage__body__text {
+  font-size: 18px !important;
+  margin: 0 !important;
+  font-weight: 300 !important;
+  line-height: 35px !important;
+  font-family: Roboto, Roboto Fallback;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    margin-top:0px;
+  }
+
+  .gallery__header {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .gallery__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .overlay-content__close {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+
+
+  .overlay-content__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay-img.active {
+    width: 30vh;      /* force scale */
+  }
+
+  .gallery__message {
+    padding: 0px;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 32px;
+  }
+
+  .gallery__message__body__header {
+    font-size: 24px !important;
+  }
+  .gallery__messsage__body__text {
+    line-height: 25px !important;
+    font-size: 16px !important;
+  }
+}

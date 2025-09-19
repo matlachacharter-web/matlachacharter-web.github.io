@@ -7,13 +7,12 @@
 }
 
 .trips__header {
-    margin: 0;
-    color: #000 !important;
-    font-size: 36px !important;
-    min-height: auto !important;
+    display: flex;
+    justify-content: center;
     font-family: Roboto, Roboto Fallback;
-    padding-top: 40px;
-    text-align: center;
+    font-size: 50px;
+    margin-top: 40px;
+    text-transform: uppercase;
 }
 
 .trips__section {
@@ -250,7 +249,12 @@
     .trips__trip-container__body__message__pricing__block__trip__detail__sub {
         font-size: 10px;
     }
-
+    
+    .trips__header {
+        font-size: 36px;
+        text-align: center;
+    }
+    
     .trips__trip-container {
         width: 100%;
     }
