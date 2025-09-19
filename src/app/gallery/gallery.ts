@@ -16,7 +16,7 @@ export class Gallery {
     this.selectedImage.set(img);
     this.selectedTitle.set(title);
 
-    if(img === 'gallery21.jpg' || img === 'gallery14.jpg' || img === 'gallery20.jpg' || img === 'gallery5.jpg' || img === 'gallery7.jpg' || img === 'gallery11.jpg') {
+    if(img === 'gallery21.jpg' || img === 'gallery14.jpg' || img === 'gallery20.jpg' || img === 'gallery5.jpg' || img === 'gallery7.jpg' || img === 'gallery11.jpg' || img === 'gallery9.jpg' || img === 'gallery8.jpg') {
       this.isTallImg.set(true);
     }
     else {

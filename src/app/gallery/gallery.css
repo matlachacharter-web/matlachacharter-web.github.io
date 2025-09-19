@@ -79,7 +79,7 @@
 
 /* Enlarged image */
 .overlay-img {
-  width: 30vh;      /* force scale */
+  width: 40vh;      /* force scale */
   height: auto;
   object-fit: contain;
   border-radius: 12px;
@@ -162,7 +162,7 @@
   }
 
   .overlay-img.active {
-    width: 20vh;      /* force scale */
+    width: 25vh;      /* force scale */
   }
 
   .gallery__message {
