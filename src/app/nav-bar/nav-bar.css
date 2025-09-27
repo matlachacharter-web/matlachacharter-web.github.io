@@ -29,7 +29,7 @@ ul, li {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    padding-right: 50px;
+    padding-right: 80px;
 }
 
 .navbar__links__list__link {
@@ -38,6 +38,11 @@ ul, li {
     font-weight: 400;
     text-decoration: none;
     color: var(--white);
+}
+
+.navbar__links__list__link--drop {
+  color: var(--black);
+  padding: 5px 16px;
 }
 
 .navbar__links__list__link:hover {
@@ -54,7 +59,50 @@ ul, li {
 
 .navbar__links__list__close__icon {
     display: none;
-  }
+}
+
+.navbar__links__list__dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.navbar__links__list__dropdown__button__arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--orange);
+  font-size: 0;
+  line-height: 0;
+  float: left;
+}
+
+.navbar__links__list__dropdown__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: max-content;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.navbar__links__list__dropdown__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  font-family: Roboto, Roboto Fallback;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+  padding: 0;
+  background: none;
+  border: none;
+}
 
 /* --------------------- */
 /* MOBILE OVERRIDE BELOW */
@@ -123,6 +171,15 @@ ul, li {
   }
 
   .navbar__links__list__link {
+    color: black;
+    font-size: 24px;
+  }
+
+  .navbar__links__list__dropdown {
+    border-bottom: 1px solid rgb(211, 211, 211);
+  }
+
+  .navbar__links__list__dropdown__button {
     color: black;
     font-size: 24px;
   }

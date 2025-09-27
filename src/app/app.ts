@@ -10,5 +10,5 @@ import { Footer } from './footer/footer';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('web-charter');
+  protected readonly title = signal('the-ultimate-guide-to-choosing-pine-island-fishing');
 }

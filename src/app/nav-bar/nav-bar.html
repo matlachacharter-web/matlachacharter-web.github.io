@@ -10,6 +10,17 @@
             <li class="navbar__links__list__option"><a class="navbar__links__list__link" (click)="closeMenu()"routerLink="/trips">Trips & Rates</a></li>
             <li class="navbar__links__list__option"><a class="navbar__links__list__link" (click)="closeMenu()"routerLink="/gallery">Gallery</a></li>
             <li class="navbar__links__list__option"><a class="navbar__links__list__link" (click)="closeMenu()"routerLink="/captain">Meet the Captain</a></li>
+            <div class="navbar__links__list__dropdown">
+                <button (click)="learnMore()" class="navbar__links__list__dropdown__button">
+                    Learn More <span><i class="navbar__links__list__dropdown__button__arrow"></i></span>
+                </button>
+                @if(this.showLearnMore) {
+                    <div class="navbar__links__list__dropdown__content">
+                        <a class="navbar__links__list__link navbar__links__list__link--drop" (click)="closeMenu()"routerLink="/license">Fishing License</a>
+                        <a class="navbar__links__list__link navbar__links__list__link--drop" (click)="closeMenu()"routerLink="/pine-island">Pine Island</a>
+                    </div>
+                }
+            </div>
         </ul>
     </div>
 </nav>

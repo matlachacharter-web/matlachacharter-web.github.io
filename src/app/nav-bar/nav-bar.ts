@@ -9,11 +9,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class NavBar {
   menuValue: boolean = false;
+  showLearnMore: boolean = false;
 
   openMenu(){
     this.menuValue =! this.menuValue ;
   }
-   closeMenu() {
+
+  closeMenu() {
     this.menuValue = false;
+    this.showLearnMore = false;
+  }
+
+  learnMore() {
+    this.showLearnMore = !this.showLearnMore;
   }
 }

@@ -42,6 +42,7 @@
 .captain-meet__header__image img {
     border-radius: 10px;
     box-shadow: 0 0 24px 24px rgba(0, 0, 0, 0.08);
+    width: 100%
 }
 
 .captain-meet__header__heading__text {
@@ -90,7 +91,8 @@
 }
 
 .captain-meet__body__boat__image img {
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
 }
 
 .captain-meet__body__boat__info__header {
@@ -119,10 +121,12 @@
         flex-direction: column;
         align-items: center;
         padding: 0;
+        border-bottom: 1px solid rgb(211, 211, 211);
     }
 
     .captain-meet__header__heading {
-        width: 100%
+        width: 100%;
+        border-radius: 0px 0px 5px 5px;
     }
 
     .captain-meet__header__heading__main {
@@ -141,6 +145,7 @@
         border-top: 1px black solid;
         border-left: 1px black solid;
         border-right: 1px solid black;
+        border-radius: 5px 5px 0px 0px;
         border-bottom: 0;
         padding: 32px;
     }
@@ -153,8 +158,13 @@
         padding: 0 32px 32px 32px;
     }
 
+    .captain-meet__header__image{
+        padding-bottom: 5px;
+    }
+
     .captain-meet__header__image img {
-        width: 200px;
+        max-width: 200px;
+        width: 100%
     }
 
     .captain-meet__body {
@@ -181,6 +191,10 @@
     }
 
     .captain-meet__body__boat__image img {
-        width: 220px;
+        width: 100%
+    }
+
+    .captain-meet__header__heading__text--bottom {
+        border-radius: 0px 0px 5px 5px;
     }
 }

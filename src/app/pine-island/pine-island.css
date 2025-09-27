@@ -1,0 +1,170 @@
+.pine-island {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.pine-island__header {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Roboto Fallback;
+    font-size: 50px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.pine-island__summary-container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+}
+
+.pine-island__summary {
+    background-color: #eee;
+    border-radius: 10px;
+    position: relative;
+    padding: 15px;
+    margin: 0 0 20px;
+    border-left: 5px solid #000;
+    width: 50%;
+}
+
+.pine-island__summary__header {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 5px;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.pine-island__summary__text {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.pine-island__body {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    padding: 20px 20% 20px 10%;
+    gap: 50px;
+}
+
+.pine-island__body__message__header {
+    font-family: Roboto, Roboto Fallback;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.pine-island__body__message__subheader {
+    font-family: Roboto, Roboto Fallback;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.pine-island__body__message__text {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+    line-height: 35px;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.pine-island__body__message__text--top {
+    padding-top: 10px;
+}
+
+.pine-island__body__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pine-island__links__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pine-island__links__link__header {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.pine-island__links__link__button {
+    padding: 16px;
+    font-size: 18px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: block;
+    margin: 25px auto;
+    background: transparent;
+    font-family: Roboto, Roboto Fallback;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .pine-island__header {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .pine-island__summary {
+        width: 100%;
+    }
+
+    .pine-island__links__link {
+        border-bottom: 1px solid rgb(211, 211, 211);
+    }
+
+    .pine-island__links__link__header {
+        text-align: center;
+    }
+
+    .pine-island__body {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .pine-island__body__message {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 32px;
+    }
+
+    .pine-island__body__header {
+        font-size: 24px;
+    }
+
+    .pine-island__body__message__text {
+        font-size: 16px !important;
+        text-align: left;
+        line-height: 25px;
+    }
+
+    .pine-island__body__message__subheader {
+        font-size: 20px;
+    }
+}
