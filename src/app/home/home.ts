@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Carousel } from '../carousel/carousel';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.css'
 })
 export class Home implements OnInit {
+  router: Router = inject(Router);
   readMore: boolean = false;
   currentDate: Date = new Date();
   currentYear: number = 0;
@@ -48,5 +49,9 @@ export class Home implements OnInit {
 
   toggleRead() {
     this.readMore = !this.readMore;
+  }
+
+  routeToContact() {
+    this.router.navigate(['/contact']);
   }
 }
