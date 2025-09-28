@@ -1,0 +1,79 @@
+<div class="contact-us">
+    <h2 class="contact-us__header">
+        Contact Us
+    </h2>
+    <div class="contact-us__info">
+        <h2 class="contact-us__info__header">
+            Matlacha Saltwater Outfitters
+        </h2>
+        <p class="contact-us__info__phone boldish">
+            Phone Number: {{this.phoneNumber}}
+        </p>
+        <p class="contact-us__info__email boldish">
+            Email: {{this.emailAddress}}
+        </p>
+    </div>
+    <div class="contact-us__message">
+        <h2 class="contact-us__message__header">
+            Pine Island Fishing Charters Contact Information
+        </h2>
+        <p class="contact-us__message__text">
+            For inquiries about Pine Island charter fishing, booking a fishing trip, or customer support, 
+            please reach out to us using the contact methods above. You can also fill out the form below, 
+            and our team will respond promptly to confirm availability and details.
+        </p>
+        <h2 class="contact-us__message__header contact-us__message__header--customer">
+            Customer Support
+        </h2>
+        <p class="contact-us__message__text">
+            To cancel or reschedule, please contact the phone number above. All cancellations must be 7 days or further away 
+            from trip date in order to receive a refund on your deposit.
+        </p>
+        <p class="contact-us__message__text">
+            Trips cancelled due to mechanical, medical, or weather-related issues will result in a refund of your deposit.
+        </p>
+    </div>
+    <div class="contact-us__form-container">
+        <form class="contact-us__form-container__form" [formGroup]="contactForm" (ngSubmit)="sendContactForm()">
+            <div>
+                <h3 class="contact-us__form-container__form__header">
+                    Contact Form
+                </h3>
+                <p class="contact-us__form-container__form__required">
+                    Fields marked with * are required.
+                </p>
+            </div>
+            <label class="contact-us__form-container__form__label">
+                <span>Full Name: <span class="contact-us__form-container__form__required">*</span></span>
+                <input class="contact-us__form-container__form__label__input" type="text" formControlName="name" required="required" maxlength="30">
+            </label>
+            <label class="contact-us__form-container__form__label">
+                <span>Phone Number: <span class="contact-us__form-container__form__required">*</span></span>
+                <input class="contact-us__form-container__form__label__input" type="text" formControlName="phone" required="required">
+            </label>
+            <label class="contact-us__form-container__form__label">
+                <span>Email Address: <span class="contact-us__form-container__form__required">*</span></span>
+                <input class="contact-us__form-container__form__label__input" type="email" formControlName="email" required="required">
+            </label>
+            <label class="contact-us__form-container__form__label">
+                <span>Type of Trip:</span>
+                <select class="contact-us__form-container__form__label__input" formControlName="type" maxlength="15">
+                    <option value="" disabled>Select an option</option>
+                    @for(option of options; track option.value) {
+                        <option [value]="option.value">
+                            {{option.value}}
+                        </option>
+                    }
+                </select>
+            </label>
+            <div class="contact-us__form-container__form__buttons">
+                <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+            </div>
+            @if(this.submitSuccess) {
+                    <p class="contact-us__form-container__form__buttons__success">
+                        Form Submitted Successfully.
+                    </p>
+            }
+        </form>
+    </div>
+</div>

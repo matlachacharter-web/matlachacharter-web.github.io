@@ -1,5 +1,7 @@
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormType } from '../services/form-type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trips',
@@ -8,6 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './trips.css'
 })
 export class Trips {
+  formHelper: FormType = inject(FormType);
+  router: Router = inject(Router);
+
   contentTarpon: string = "Experience the ultimate 4 to 8-hour tarpon fishing trip in Matlacha and Pine Island, where where you'll battle one of the most powerful sportfish in the Gulf. These hard-fighting giants are known for their explosive jumps and drag-screaming runs, making every catch an unforgettable experience. Captain Whitney Hall will guide you to the best tarpon hotspots, using expert techniques to give you the best chance at landing a trophy fish. With peak tarpon season offering some of the most intense fishing action, now is the perfect time to plan your trip. Test your skills against the Silver King and book your tarpon fishing adventure today!";
   contentSunset: string = "Experience the beauty of a Gulf Coast sunset on this 2-hour cruise, the perfect way to end your day in Pine Island and Matlacha. Drift through calm waters as the sky transforms into a brilliant display of colors, with dolphins often making an appearance along the way. Whether you're enjoying a romantic evening or a peaceful outing with family and friends, this cruise offers a serene way to take in Florida’s coastal charm. Feel the gentle sea breeze and listen to the soothing sounds of nature as the sun dips below the horizon. Sit back, soak in the view, and enjoy the quiet beauty of the water. Book your sunset cruise today and create lasting memories on the Gulf!";
   contentEco: string = "Explore the untouched beauty of Pine Island and Matlacha on this 4-hour ecotour, perfect for nature lovers and wildlife enthusiasts. Cruise through pristine mangrove tunnels, seagrass flats, and coastal estuaries, where you’ll spot dolphins, manatees, sea turtles, and a variety of native birds. Captain Whitney Hall will share fascinating insights about the local ecosystem, making this both a relaxing and educational experience. Reconnect with nature, capture stunning views, and enjoy the peaceful side of Florida’s Gulf Coast. Book your Pine Island ecotour today for an unforgettable adventure on the water!";
@@ -45,5 +50,10 @@ export class Trips {
     else if (trip === 'in') {
       this.showMoreIn = !this.showMoreIn;
     }
+  }
+
+  routeToForm(number: number) {
+    this.formHelper.setFormRoute(number);
+    this.router.navigate(['/contact']);
   }
 }

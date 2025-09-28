@@ -28,8 +28,9 @@ ul, li {
 .navbar__links__list {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 100px;
     padding-right: 80px;
+    align-items: center;
 }
 
 .navbar__links__list__link {
@@ -43,6 +44,28 @@ ul, li {
 .navbar__links__list__link--drop {
   color: var(--black);
   padding: 5px 16px;
+}
+
+.navbar__links__list__option--schedule {
+  border: solid 1px white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.navbar__links__list__link--schedule {
+  font-size: 20px;
+  font-family: Roboto, Roboto Fallback;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navbar__links__list__link--schedule:hover {
+  color: var(--black);
+}
+
+.navbar__links__list__option--schedule:hover {
+  background-color: var(--white);
 }
 
 .navbar__links__list__link:hover {
@@ -139,6 +162,7 @@ ul, li {
 
   .navbar__links__list {
     display: none;
+    align-items: stretch;
   }
 
   .navbar__links.active .navbar__links__list {
@@ -157,7 +181,7 @@ ul, li {
     padding-left: 10px;
   }
 
-  .navbar__links__list__option {
+  .navbar__links__list__option, .navbar__links__list__option--schedule{
     border-bottom: 1px solid rgb(211, 211, 211);
   }
 
@@ -171,6 +195,11 @@ ul, li {
   }
 
   .navbar__links__list__link {
+    color: black;
+    font-size: 24px;
+  }
+
+  .navbar__links__list__link--schedule {
     color: black;
     font-size: 24px;
   }

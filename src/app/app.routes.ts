@@ -5,6 +5,7 @@ import { Gallery } from './gallery/gallery';
 import { CaptainMeet } from './captain-meet/captain-meet';
 import { License } from './license/license';
 import { PineIsland } from './pine-island/pine-island';
+import { ContactUs } from './contact-us/contact-us';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path: 'gallery', component: Gallery},
     {path: 'captain', component: CaptainMeet},
     {path: 'license', component: License},
-    {path: 'pine-island', component: PineIsland}
+    {path: 'pine-island', component: PineIsland},
+    {path: 'contact', component: ContactUs}
 ];

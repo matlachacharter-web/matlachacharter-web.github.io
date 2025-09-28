@@ -1,0 +1,179 @@
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 100px;
+}
+
+.contact-us__header {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Roboto Fallback;
+    font-size: 50px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.contact-us__info, .contact-us__message {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20% 20px 10%;
+}
+
+.contact-us__info__header {
+    font-family: Roboto, Roboto Fallback;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.contact-us__message__header {
+    font-family: Roboto, Roboto Fallback;
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.contact-us__info__phone, .contact-us__info__email, .contact-us__message__text {
+    font-size: 18px;
+    margin: 0;
+    line-height: 35px;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.contact-us__message__text {
+    font-weight: 300;
+}
+
+.contact-us__form-container__form__required {
+    font-size: 18px;
+    margin: 0;
+    line-height: 35px;
+    font-family: Roboto, Roboto Fallback;
+    color: rgb(202, 56, 45);
+
+}
+
+.contact-us__form-container {
+    padding: 20px 20% 20px 10%;
+}
+
+.contact-us__form-container__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 20% 20px 10%;
+    background-color: #eee;
+    border-radius: 10px;
+    border-left: 5px solid #000;
+}
+
+.contact-us__message__header--customer {
+    padding-top: 20px;
+}
+
+.contact-us__form-container__form__header {
+    font-family: Roboto, Roboto Fallback;
+    font-size: 28px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.contact-us__form-container__form__label {
+    display: grid;
+}
+
+.contact-us__form-container__form__label span {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.contact-us__form-container__form__label__input {
+    padding: var(--padding-large);
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+    font-family: Roboto, Roboto Fallback;
+}
+
+.contact-us__form-container__form__buttons button {
+    padding: 12px 24px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-family: Roboto, Roboto Fallback;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact-us__form-container__form__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us__form-container__form__buttons button:hover {
+    background-color: var(--orange);
+}
+
+.contact-us__form-container__form__buttons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.contact-us__form-container__form__buttons__success {
+    font-size: 18px;
+    margin: 0;
+    line-height: 35px;
+    font-family: Roboto, Roboto Fallback;
+    color: var(--black);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contact-us__header {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .contact-us__info {
+        padding: 0;
+        background-color: #eee;
+        border-radius: 10px;
+        position: relative;
+        padding: 15px;
+        margin: 0 0 20px;
+        border-left: 5px solid #000;
+    }
+
+    .contact-us__message {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 32px;
+        margin-bottom: 20px;
+    }
+
+    .contact-us__message__header {
+        font-size: 24px;
+    }
+
+    .contact-us__message__text {
+        font-size: 16px;
+        text-align: left;
+        line-height: 25px;
+    }
+
+    .contact-us__form-container {
+        padding: 0;
+    }
+
+    .contact-us__form-container__form {
+        padding: 32px;
+    }
+}

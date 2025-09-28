@@ -35,3 +35,7 @@ body, html {
 .bold {
   font-weight: 700;
 }
+
+.boldish {
+  font-weight: 500;
+}
